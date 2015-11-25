@@ -19,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.drcarter.recyclerview.fastscroll.drawable.IndexDrawable;
+import com.drcarter.recyclerview.fastscroll.utils.ApiCompat;
 
 public class FastScroller extends LinearLayout {
 
@@ -271,11 +272,11 @@ public class FastScroller extends LinearLayout {
 
         if (listener != null) {
             String index = listener.getIndexer(position);
-            if (TextUtils.isEmpty(index)) {
+            if (!TextUtils.isEmpty(index)) {
                 viewIndex.setImageDrawable(IndexDrawable.builder()
-                        .textColor(getResources().getColor(android.R.color.white))
+                        .textColor(ApiCompat.getColor(getContext(), android.R.color.white))
                         .fontSize(getResources().getDimensionPixelSize(R.dimen.fastscroller_index_text_size))
-                        .build(index, getResources().getColor(android.R.color.transparent)));
+                        .build(index, ApiCompat.getColor(getContext(), android.R.color.transparent)));
             }
         }
     }

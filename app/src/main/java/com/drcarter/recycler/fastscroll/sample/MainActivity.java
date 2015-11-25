@@ -11,11 +11,16 @@ import com.drcarter.recycler.fastscroll.sample.adapter.SampleAdapter;
 import com.drcarter.recyclerview.fastscroll.FastScroller;
 import com.drcarter.recyclerview.fastscroll.layoutmanager.ScrollingLinearLayoutManager;
 
+import butterknife.Bind;
+
 public class MainActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
+    @Bind(R.id.recyclerview)
+    RecyclerView recyclerView;
+    @Bind(R.id.fastscroller)
+    FastScroller fastScroller;
+
     private SampleAdapter adapter;
-    private FastScroller fastScroller;
 
     private LinearLayoutManager layoutManager;
 
@@ -26,11 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
         this.layoutManager = new ScrollingLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false, getResources().getInteger(R.integer.default_animatin_duration));
         this.adapter = new SampleAdapter(this);
-        this.recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         this.recyclerView.setLayoutManager(this.layoutManager);
         this.recyclerView.setAdapter(this.adapter);
 
-        this.fastScroller = (FastScroller) findViewById(R.id.fastscroller);
         this.fastScroller.setRecyclerView(this.recyclerView, this.layoutManager);
         this.fastScroller.setIndexer(this.adapter);
     }
