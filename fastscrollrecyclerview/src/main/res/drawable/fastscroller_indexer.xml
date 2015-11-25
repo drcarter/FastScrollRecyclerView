@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="@dimen/fastscroller_indexer_size"
+                android:height="@dimen/fastscroller_indexer_size" />
+            <solid android:color="@color/fastscroller_default_color" />
+            <corners
+                android:bottomLeftRadius="@dimen/fastscroller_indexer_corner_round"
+                android:bottomRightRadius="@dimen/fastscroller_indexer_corner_round"
+                android:topLeftRadius="@dimen/fastscroller_indexer_corner_round"
+                android:topRightRadius="@dimen/fastscroller_indexer_corner_round" />
+        </shape>
+    </item>
+</layer-list>

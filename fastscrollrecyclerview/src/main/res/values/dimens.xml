@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fastscroller_track_corner">2dp</dimen>
+    <dimen name="fastscroller_track_height">40dp</dimen>
+    <dimen name="fastscroller_track_width">4dp</dimen>
+
+    <dimen name="fastscroller_index_text_size">35sp</dimen>
+
+    <dimen name="fastscroller_indexer_size">60dip</dimen>
+    <dimen name="fastscroller_indexer_corner_round">10dip</dimen>
+</resources>
