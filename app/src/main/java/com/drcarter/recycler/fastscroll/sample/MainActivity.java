@@ -12,6 +12,7 @@ import com.drcarter.recyclerview.fastscroll.FastScroller;
 import com.drcarter.recyclerview.fastscroll.layoutmanager.ScrollingLinearLayoutManager;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ButterKnife.bind(this, this);
+
         this.layoutManager = new ScrollingLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false, getResources().getInteger(R.integer.default_animatin_duration));
         this.adapter = new SampleAdapter(this);
         this.recyclerView.setLayoutManager(this.layoutManager);
@@ -36,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
         this.fastScroller.setRecyclerView(this.recyclerView, this.layoutManager);
         this.fastScroller.setIndexer(this.adapter);
+    }
+
+    @Override
+    protected void onDestroy() {
+        ButterKnife.unbind(this);
+        super.onDestroy();
     }
 
     @Override

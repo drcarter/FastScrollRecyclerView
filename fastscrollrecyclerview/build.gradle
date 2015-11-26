@@ -6,14 +6,14 @@ ext {
 
     publishedGroupId = 'com.github.drcarter.magimonlibrary'
     libraryName = 'FastScrollRecyclerView'
-    artifact = 'fastscroll_recyclerview'
+    artifact = 'fastscrollrecyclerview'
 
     libraryDescription = 'FastScroll RecyclerView'
 
-    siteUrl = 'https://github.com/drcarter/FastScrollRecyclslerView'
+    siteUrl = 'https://github.com/drcarter/FastScrollRecyclerView'
     gitUrl = 'https://github.com/drcarter/FastScrollRecyclerView.git'
 
-    libraryVersion = '0.5.0'
+    libraryVersion = '0.9.0'
 
     developerId = 'drcarter'
     developerName = 'JiHyun Yoon'
@@ -32,7 +32,7 @@ android {
         minSdkVersion 11
         targetSdkVersion 23
         versionCode 1
-        versionName "0.5.0"
+        versionName "0.9.0"
     }
     buildTypes {
         release {
