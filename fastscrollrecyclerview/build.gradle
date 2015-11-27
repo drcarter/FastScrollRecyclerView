@@ -4,7 +4,7 @@ ext {
     bintrayRepo = 'maven'
     bintrayName = 'fastscrollrecyclerview'
 
-    publishedGroupId = 'com.github.drcarter.magimonlibrary'
+    publishedGroupId = 'com.github.drcarter'
     libraryName = 'FastScrollRecyclerView'
     artifact = 'fastscrollrecyclerview'
 
